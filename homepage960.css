@@ -1,0 +1,495 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202522;
+    color: #E3E6DD;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #202522;
+    padding: 15px 40px;
+    border-bottom: 1px solid #455047;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    background-color: #B1BEA1;
+    color: #202522;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    font-size: 20px;
+    color: #E3E6DD;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #B1BEA1;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #E3E6DD;
+}
+
+/* Contact Button */
+.contact-btn {
+    background-color: #B1BEA1;
+    color: #202522;
+    padding: 12px 20px;
+    border-radius: 25px;
+}
+
+.contact-btn:hover {
+    background-color: #8F9F80;
+    color: #202522;
+}
+
+/* Main Content */
+main {
+    width: 960px;
+	max-width: 100%;
+    margin: 0 auto;
+    padding: 90px 0px;
+}
+
+/* Hero Section - 960 Grid */
+.hero {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+/* Hero Text */
+.hero-text {
+    grid-column: 2 / span 5;
+    min-width: 0;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+    color: #E3E6DD;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    color: #BFC8B8;
+}
+
+/* Portfolio Button */
+.portfolio-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #B1BEA1;
+    border-radius: 25px;
+    color: #B1BEA1;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.portfolio-btn:hover {
+    background-color: #B1BEA1;
+    color: #202522;
+}
+
+/* Hero Image */
+.hero-image {
+    grid-column: span 6;
+    min-width: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+/* Smaller Screens */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+		align-items: center;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 50px 20px;
+    }
+
+   .hero {
+    grid-template-columns: 1fr;
+}
+
+.hero-text,
+.hero-image {
+    grid-column: 1;
+ }
+}
+
+/* About Me Page */
+.about {
+    grid-column: span 12;
+    padding: 40px;
+}
+
+.about h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.about h3 {
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* Photos Page */
+.gallery {
+    grid-column: 1 / -1;
+}
+.gallery h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.gallery p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Three Column Photo Gallery */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    min-width: 0;
+}
+
+.photo-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.photo-card h3 {
+    font-size: 24px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Expandable Photography Categories */
+.more-gallery {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.more-gallery summary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #b7c4aa;
+    color: #202723;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.more-gallery summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-gallery summary:hover {
+    background-color: #dce5d3;
+}
+
+
+.more-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 30px auto 0;
+}
+
+
+.more-category {
+    padding: 18px 20px;
+    border: 1px solid #b7c4aa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.more-category h3 {
+    font-size: 20px;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+/* More Photography Links */
+.more-category a {
+    display: block;
+    color: #e5e8df;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.more-category:hover {
+    background-color: #b7c4aa;
+    cursor: pointer;
+}
+
+.more-category:hover a {
+    color: #202723;
+}
+
+
+/* Clickable Photo Covers */
+.photo-card a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo-card a img {
+    transition: transform 0.3s ease;
+}
+
+.photo-card a:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Services Page */
+.services {
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.services h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.services > p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Two Column Services Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid #b7c4aa;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.service-card p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.service-price {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #b7c4aa;
+}
+
+/* Services Buttons */
+.service-btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 12px 25px;
+    background-color: #b7c4aa;
+    color: #202723;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.service-btn:hover {
+    background-color: #dce5d3;
+}
+
+
+/* Contact Page */
+.contact {
+    grid-column: 1 / -1;
+    padding: 40px;
+}
+
+.contact h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Contact Information Layout */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid #b7c4aa;
+    border-radius: 8px;
+}
+
+.contact-card h3 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.contact-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Contact Buttons */
+.contact-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 12px 25px;
+    background-color: #b7c4aa;
+    color: #202723;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    background-color: #dce5d3;
+}
+
+/* Homepage Logo Link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* About Me Photo Layout */
+.about-intro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* About Me Photograph */
+
+.about-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 8px;
+}
+
+
+/* About Me Introduction */
+.about-intro p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Responsive Layout */
+@media (max-width: 700px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+}
