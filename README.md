@@ -1,2 +1,0 @@
-# KeanuT
-DGME167_FALL2K26
