@@ -493,3 +493,13 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+/* Responsive Grid */
+@media (max-width: 980px) {
+    .grid960 {
+        width: 100%;
+        max-width: 960px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
